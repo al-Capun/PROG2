@@ -11,11 +11,11 @@ text goes here
 Workflow
 --------
 
-**Dateneingabe**
+**Dateneingabe** <br>
 Text goes here
 
-**Datenverarbeitung/Speicherung**
+**Datenverarbeitung/Speicherung** <br>
 Text goes here
 
-**Datenausgabe**
+**Datenausgabe** <br>
 Text goes here
