@@ -19,3 +19,5 @@ Im Pool werden die verschiedenen Dateien von der Community bewertet. Fällt das 
 
 **Datenausgabe** <br>
 Mit dem Credit kann der Nutzer nun eine andere Datei aus der Community herunterladen.
+
+FRAN 26.2.2020
