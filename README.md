@@ -6,16 +6,16 @@ text goes here
 
 Funktion/Projektidee
 --------------------
-text goes here
+Es soll eine Dateiaustauschplattform entstehen, auf welcher Nutzer verschiedene Dateien austauschen können untereinander. Dies können Bilder, Videos, Projektideen, Mockups, Zusammenfassungen oder ähnliches sein.
 
 Workflow
 --------
 
 **Dateneingabe** <br>
-Text goes here
+Via Upload können Nutzer Dateien hochladen. Diese werden in ein Pool geworfen.
 
 **Datenverarbeitung/Speicherung** <br>
-Text goes here
+Im Pool werden die verschiedenen Dateien von der Community bewertet. Fällt das Rating positiv aus, erhält der Besitzer der Dateien einen Credit.
 
 **Datenausgabe** <br>
-Text goes here
+Mit dem Credit kann der Nutzer nun eine andere Datei aus der Community herunterladen.
