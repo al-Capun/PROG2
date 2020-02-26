@@ -2,7 +2,7 @@
 
 Ausgangslage
 ------------
-text goes here
+keine
 
 Funktion/Projektidee
 --------------------
