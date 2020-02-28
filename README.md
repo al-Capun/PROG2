@@ -2,22 +2,22 @@
 
 Ausgangslage
 ------------
-keine
+keine.
 
 Funktion/Projektidee
 --------------------
-Es soll eine Dateiaustauschplattform entstehen, auf welcher Nutzer verschiedene Dateien austauschen können untereinander. Dies können Bilder, Videos, Projektideen, Mockups, Zusammenfassungen oder ähnliches sein.
+Es soll eine Dateiaustauschplattform entstehen, auf welcher Nutzer verschiedene Dateien (Bilder, Videos, Projektideen, Mockups, Zusammenfassungen oder ähnliches) hoch- und runterladen können. Zudem können Nutzer die Qualität der Dateien bewerten.
 
 Workflow
 --------
 
 **Dateneingabe** <br>
-Via Upload können Nutzer Dateien hochladen. Diese werden in ein Pool geworfen.
+Via Upload können Nutzer die Dateien hochladen. Der Nutzer und die Datei sollen miteinander verknüpft sein.
 
 **Datenverarbeitung/Speicherung** <br>
-Im Pool werden die verschiedenen Dateien von der Community bewertet. Fällt das Rating positiv aus, erhält der Besitzer der Dateien einen Credit.
+Dateien können angeschaut und bewertet werden. Zudem kann der Nutzer Dateien nach verschiedenen Kriterien sortieren.
 
 **Datenausgabe** <br>
-Mit dem Credit kann der Nutzer nun eine andere Datei aus der Community herunterladen.
+Hochgeladene Dateien können von anderen Nutzern runtergeladen werden.
 
-FRAN 26.2.2020
+FRAN 28.2.2020
