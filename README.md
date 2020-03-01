@@ -1,15 +1,25 @@
 # PROG2 WebApp
 
+## Fragen
+- Welches Format soll benutzt werden für die Eingabe, Speicherung und Ausgabe?
+
 ## TODO
 - [x] Create project proposal
-- [ ] text goes here
-- [ ] text goes here
-- [ ] text goes here
-  - [ ] text goes here
-  - [ ] text goes here
-- [ ] text goes here
+- [x] erste Besprechung mit Dozenten
+- [ ] Ablaufdiagramm erstellen
+- [ ] Mockups erstellen
+- [ ] Basic Layout (Dashboard) mit HTML, CSS und Bootstrap (?)
+- [ ] Implementierung Upload
+  - [ ] weitere Seite erstellen für den Upload
+  - [ ] Eingabemasken definieren und erstellen
+  - [ ] Speicherung ermöglichen
+- [ ] Implementierung Download
+  - [ ] Eingabemasken definieren
+- [ ] Implementierung Like Button
+  - [ ] counter implementieren
 
-## Ausgangslage
+
+## Ausgangslage / Motivation
 Es soll eine Dateiaustauschplattform entstehen, auf welcher Nutzer verschiedene Dateien (Bilder, Videos, Projektideen, Mockups, Zusammenfassungen oder ähnliches) hoch- und runterladen können. Zudem können Nutzer die Qualität der Dateien bewerten.
 
 ## Funktion/Projektidee
@@ -21,16 +31,19 @@ Es soll eine Dateiaustauschplattform entstehen, auf welcher Nutzer verschiedene 
 
 ## Workflow
 - User kann Datei hochladen und einen Namen geben.
-...
-...
+- User kann in Dashboard verschiedene Dateien der Community anschauen, liken, filtern und runterladen.
+- User kann Dateien jederzeit löschen.
 
 ### Dateneingabe
-Via Upload können Nutzer die Dateien hochladen. Der Nutzer und die Datei sollen miteinander verknüpft sein.
+Eine Datei hat folgende Informationen, die vom Benutzer angegeben werden müssen:
+- Dateiname
+- Ersteller
 
 ### Datenverarbeitung/Speicherung
-Dateien können angeschaut und bewertet werden. Zudem kann der Nutzer Dateien nach verschiedenen Kriterien sortieren.
+Als Datenspeicherung wird eine JSON Datei verwendet.
+...
 
 ### Datenausgabe
-Hochgeladene Dateien können von anderen Nutzern runtergeladen werden.
+Download via ???
 
-FRAN 28.2.2020
+FRAN 1.3.2020
