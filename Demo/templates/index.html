@@ -1,0 +1,18 @@
+<DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Hello</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	</head>
+	<body>
+		<h1> Hallo Antonin</h1>
+		<p> bla bla bla der Loris ist da </p>
+		<a href="{{ url_for('test')}}">Test</a>
+
+		<form method="POST">
+    		<input type="text" name="vorname" placeholder="Bitte geben Sie Ihren Namen ein">
+    		<button type="submit">Senden</button>
+		</form>
+	</body>
+</html>
