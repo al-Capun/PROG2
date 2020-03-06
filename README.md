@@ -46,4 +46,7 @@ Als Datenspeicherung wird eine JSON Datei verwendet.
 ### Datenausgabe
 Download via ???
 
+## Seitennavigation / Szenarios
+![blabla](/Szenario/Prog2_WebApp_Scenario_1.png)
+
 FRAN 1.3.2020
