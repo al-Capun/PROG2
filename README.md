@@ -48,16 +48,16 @@ Download via ???
 
 ## Mockups
 ### Startseite / Dashboard / Feed
-Mockup goes here
+![Startsite](./mockups/Startsite.png)
 
 ### Upload
-Mockup goes here
+![Upload](./mockups/Upload.png)
 
 ### Filterfunktion
-Mockup goes here
+![Filter](./mockups/Filter.png)
 
 ### Download
-Mockup goes here
+![Download](./mockups/Download.png)
 
 ## Seitennavigation / Szenarios
 ![Scenarios](./scenarios/scenarios.png)
