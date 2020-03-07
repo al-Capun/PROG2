@@ -7,7 +7,7 @@
 - [x] Create project proposal
 - [x] erste Besprechung mit Dozenten
 - [x] Ablaufdiagramm erstellen
-- [ ] Mockups erstellen
+- [X] Mockups erstellen
 - [ ] Basic Layout (Dashboard) mit HTML, CSS und Bootstrap (?)
 - [ ] Implementierung Upload
   - [ ] weitere Seite erstellen für den Upload
