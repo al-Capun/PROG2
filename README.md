@@ -46,5 +46,18 @@ Als Datenspeicherung wird eine JSON Datei verwendet.
 ### Datenausgabe
 Download via ???
 
+## Mockups
+### Startseite / Dashboard / Feed
+Mockup goes here
+
+### Upload
+Mockup goes here
+
+### Filterfunktion
+Mockup goes here
+
+### Download
+Mockup goes here
+
 ## Seitennavigation / Szenarios
 ![Scenarios](./scenarios/scenarios.png)
