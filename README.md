@@ -9,6 +9,7 @@
 - [x] Ablaufdiagramm erstellen
 - [X] Mockups erstellen
 - [X] Basic Layout (Dashboard) mit HTML, CSS und Bootstrap
+- [ ] Create JSON File
 - [ ] Implementierung Upload
   - [ ] weitere Seite erstellen für den Upload
   - [ ] Eingabemasken definieren und erstellen
