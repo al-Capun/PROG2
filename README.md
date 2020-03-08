@@ -8,7 +8,7 @@
 - [x] erste Besprechung mit Dozenten
 - [x] Ablaufdiagramm erstellen
 - [X] Mockups erstellen
-- [ ] Basic Layout (Dashboard) mit HTML, CSS und Bootstrap (?)
+- [X] Basic Layout (Dashboard) mit HTML, CSS und Bootstrap
 - [ ] Implementierung Upload
   - [ ] weitere Seite erstellen für den Upload
   - [ ] Eingabemasken definieren und erstellen
