@@ -1,7 +1,9 @@
 # PROG2 WebApp
 
-## Fragen
-- Welches Format soll benutzt werden für die Eingabe, Speicherung und Ausgabe?
+## Notizen
+NEXT STEPS:
+1) upload Bootstrap machen
+2) Vorschau der Dateien ermöglichen. Idee: Python soll die Dateiendungen erkennen und dann je nach Datei ein anderes Standardbild reiladen (zb PDF) und wenn es ein Bild ist soll kein Standardbild reingeladen werden sondern das hochgeladene Bild.
 
 ## TODO
 - [x] Create project proposal
@@ -9,14 +11,19 @@
 - [x] Ablaufdiagramm erstellen
 - [X] Mockups erstellen
 - [X] Basic Layout (Dashboard) mit HTML, CSS und Bootstrap
-- [ ] Create JSON File
+- [X] Create JSON File
 - [ ] Implementierung Upload
-  - [ ] weitere Seite erstellen für den Upload
+  - [X] Funktionalität testen
   - [ ] Eingabemasken definieren und erstellen
-  - [ ] Speicherung ermöglichen
+  - [ ] Layout mit Bootstrap machen
+  - [ ] Vorschau der Dateien ermöglichen (siehe Notizen oben)
 - [ ] Implementierung Download
   - [ ] Eingabemasken definieren
-- [ ] Implementierung Like Button
+  - [ ] Funktionalität mit HTML testen
+  - [ ] Layout mit Bootstrap machen
+- [ ] Bearbeitung auf der Seite ermöglichen
+  - [ ] Bearbeitung der verschiedenen Cards ermöglichen
+  - [ ] Implementierung Like Button
   - [ ] counter implementieren
 
 
