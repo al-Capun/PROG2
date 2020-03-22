@@ -9,6 +9,7 @@ import json
 app = Flask("WebApp")
 
 
+# JSON File rauslesen und im Feed laden.
 def load_feed(path):
     with open(path, "r", encoding="utf-8") as file:
         result = json.load(file)
@@ -28,16 +29,18 @@ def feed():
     return render_template("feed.html", files=files)
 
 
+# Upload
 @app.route('/file_upload/', methods=["GET", "POST"])
 def file_upload():
     files = load_feed('./static/uploaded-files.json')
     if request.method == "POST":
         name = request.form.get("name")
         beschreibung = request.form.get("beschreibung")
+        pfad = request.form.get("pfad")
         new_file = {}
         new_file["name"] = name
         new_file["beschreibung"] = beschreibung
-        new_file["pfad"] = ""
+        new_file["pfad"] = pfad
 
         files.append(new_file)
         save_files('./static/uploaded-files.json', files)

@@ -59,9 +59,20 @@
             <input id="name" type="text" name="name"><br>
             
             <label for="beschreibung">Beschreibung: </label>
-            <input id="beschreibung" type="text" name="beschreibung">
+            <input id="beschreibung" type="text" name="beschreibung"><br>
 
-            <button type="submit">Speichern</button>
+
+            <label for="file-type">File Type: </label><br>
+            <select id="file-type" name="file-type">
+                <option value="word">Word</option>
+                <option value="none">Etwas Anderes</option>
+            </select>
+
+            <form action="/action_page.php">
+                <label for="myfile">Select a file:</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+                <input type="submit">
+            </form>
         </form>
 
     </body>
