@@ -82,14 +82,16 @@
             <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Dummy File</h4>
             </div>
-            {% if file['file_type'] == 'word'%} <!-- diese fünf Zeilen funktionieren noch nicht. -->
+
+            <!-- diese fünf Zeilen funktionieren noch nicht.
+            {% if file['file_type'] == 'word'%}
               <img src="/static/file-type-images/word.png">
             {% else %}
               <img src="/static/file-type-images/500x500.png">
             {% endif %}
-            <!--
-            <img src="/static/galleries/jj-ying-7JX0-bfiuxQ-unsplash_low.jpg" class="card-img-top" alt="dummy_image">
             -->
+            <img src="/static/galleries/jj-ying-7JX0-bfiuxQ-unsplash_low.jpg" class="card-img-top" alt="dummy_image">
+            
             <div class="card-body">
               <h5 class="card-title">{{ file['name'] }}</h5>
               <p class="card-text">{{ file['beschreibung'] }}</p>
