@@ -35,12 +35,12 @@ def file_upload():
     files = load_feed('./static/uploaded-files.json')
     if request.method == "POST":
         name = request.form.get("name")
-        beschreibung = request.form.get("beschreibung")
-        pfad = request.form.get("pfad")
+        file_name = request.form.get("file_name")
+        description = request.form.get("description")
         new_file = {}
         new_file["name"] = name
-        new_file["beschreibung"] = beschreibung
-        new_file["pfad"] = pfad
+        new_file["file_name"] = file_name
+        new_file["description"] = description
 
         files.append(new_file)
         save_files('./static/uploaded-files.json', files)
