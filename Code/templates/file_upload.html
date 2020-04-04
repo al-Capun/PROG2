@@ -27,7 +27,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="{{ url_for('file_upload')}}">asdf</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -63,11 +63,19 @@
                                     <label for="description">Content description</label>
                                     <textarea class="form-control" name="description" id="description" placeholder="Text goes here" rows="5"></textarea>
                                 </div>
-                            
+                                <div class="form-group">
+                                  <label>Select image</label>
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="image" id="image">
+                                    <label class="custom-file-label" for="image">Select image...</label>
+                                  </div>
+                                </div>    
+                                <!--
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="customFile">
                                     <label class="custom-file-label" for="file">Choose file</label>
                                 </div>
+                                -->
                                 <button type="submit" class="btn btn-outline-dark mt-4">Submit</button>
                             </form>
                         </div>

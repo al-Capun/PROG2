@@ -31,6 +31,29 @@ def feed():
     return render_template("feed.html", files=files)
 
 
+# Upload
+@app.route('/file_upload/', methods=["GET", "POST"])
+def file_upload():
+    files = load_feed('./static/uploaded-files.json')
+    if request.method == "POST":
+        name = request.form.get("name")
+        file_name = request.form.get("file_name")
+        description = request.form.get("description")
+        new_file = {}
+        new_file["name"] = name
+        new_file["file_name"] = file_name
+        new_file["description"] = description
+
+        files.append(new_file)
+        save_files('./static/uploaded-files.json', files)
+
+        return redirect(url_for("feed"))
+    return render_template("file_upload.html")
+
+
+# 28.3.2020
+
+
 app.config["IMAGE_UPLOADS"] = "./files"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["JPEG", "JPG", "PNG", "GIF"]
 app.config["MAX_IMAGE_FILESIZE"] = 0.5 * 1024 * 1024
@@ -57,22 +80,11 @@ def allowed_image_filesize(filesize):
         return False
 
 
-# Upload
-@app.route('/file_upload/', methods=["GET", "POST"])
-def file_upload():
-    files = load_feed('./static/uploaded-files.json')
+@app.route('/upload_image', methods=["GET", "POST"])
+def upload_image():
+    print(request.method)
     if request.method == "POST":
-        name = request.form.get("name")
-        file_name = request.form.get("file_name")
-        description = request.form.get("description")
-        new_file = {}
-        new_file["name"] = name
-        new_file["file_name"] = file_name
-        new_file["description"] = description
-
-        files.append(new_file)
-        save_files('./static/uploaded-files.json', files)
-
+        print(request.files)
         if request.files:
             print("cookies:", request.cookies)
 
@@ -96,9 +108,7 @@ def file_upload():
             else:
                 print("That file extension is not allowed")
                 return redirect(request.url)
-
-        return redirect(url_for("feed"))
-    return render_template("file_upload.html")
+    return render_template("upload_image.html")
 
 
 # diese Zeile muss immer zuunterst sein!!
