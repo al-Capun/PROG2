@@ -65,14 +65,31 @@ def file_upload():
         name = request.form.get("name")
         file_name = request.form.get("file_name")
         description = request.form.get("description")
+        anyfile = request.form.get("anyfile")     # neu Test 2
         new_file = {}
         new_file["name"] = name
         new_file["file_name"] = file_name
         new_file["description"] = description
+        new_file["anyfile"] = anyfile        # neu Test 2
 
         files.append(new_file)
         save_files('./static/uploaded-files.json', files)
 
+        if 'file' not in request.files:     # ab hier alles nue Test 2
+            datapath = './static/test.csv'
+            plot_id = str(uuid.uuid1())
+        else:
+            f = request.files['file']
+            f.save(secure_filename(f.filename))
+            filename = secure_filename(f.filename)
+            f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+        return redirect(url_for("feed"))
+    return render_template("file_upload.html")
+
+
+# Test 1
+"""
         if request.files:
             print("cookies:", request.cookies)
 
@@ -99,6 +116,7 @@ def file_upload():
 
         return redirect(url_for("feed"))
     return render_template("file_upload.html")
+"""
 
 
 # diese Zeile muss immer zuunterst sein!!

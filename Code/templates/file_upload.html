@@ -78,6 +78,15 @@
                                 -->
                                 <button type="submit" class="btn btn-outline-dark mt-4">Submit</button>
                             </form>
+
+
+                            <form action="/submitted" enctype=multipart/form-data method="POST" onsubmit="showDiv('loading')">
+                              <input type="text" name="query" size="50" required><br>
+                              <input type="file" id="fileSelect" name="file" accept=".csv">
+                              <input type="submit" id="query_submit">
+                           </form>
+
+                           
                         </div>
                     </div>
                 </div>
