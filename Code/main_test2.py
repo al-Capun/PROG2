@@ -65,14 +65,28 @@ def file_upload():
         name = request.form.get("name")
         file_name = request.form.get("file_name")
         description = request.form.get("description")
+        anyfile = request.form.get("anyfile")     # neu Test 2
         new_file = {}
         new_file["name"] = name
         new_file["file_name"] = file_name
         new_file["description"] = description
+        new_file["anyfile"] = anyfile        # neu Test 2
 
         files.append(new_file)
         save_files('./static/uploaded-files.json', files)
 
+        if 'file' not in request.files:     # ab hier alles neu Test 2
+            f = request.files['image']
+            f.save(secure_filename(f.filename))
+            filename = secure_filename(f.filename)
+            f.save(os.path.join(app.config['IMAGE_UPLOADS'], filename))
+
+        return redirect(url_for("feed"))
+    return render_template("file_upload.html")
+
+
+# Test 1
+"""
         if request.files:
             print("cookies:", request.cookies)
 
@@ -87,7 +101,7 @@ def file_upload():
 
                 image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
 
-                return os.path.abspath(os.path.join(app.config["IMAGE_UPLOADS"], filename))
+                #return os.path.abspath(os.path.join(app.config["IMAGE_UPLOADS"], filename))
 
                 print("Image saved")
 
@@ -99,6 +113,7 @@ def file_upload():
 
         return redirect(url_for("feed"))
     return render_template("file_upload.html")
+"""
 
 
 # diese Zeile muss immer zuunterst sein!!

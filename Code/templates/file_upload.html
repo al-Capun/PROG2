@@ -50,7 +50,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form method="POST">
+                            <form method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="name">Author name</label>
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Author name">
@@ -79,14 +79,15 @@
                                 <button type="submit" class="btn btn-outline-dark mt-4">Submit</button>
                             </form>
 
-
+                            <!--
                             <form action="/submitted" enctype=multipart/form-data method="POST" onsubmit="showDiv('loading')">
                               <input type="text" name="query" size="50" required><br>
                               <input type="file" id="fileSelect" name="file" accept=".csv">
                               <input type="submit" id="query_submit">
-                           </form>
+                            </form>
+                            -->
 
-                           
+
                         </div>
                     </div>
                 </div>
