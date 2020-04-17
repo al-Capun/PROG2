@@ -1,1 +1,10 @@
-[{"name": "Antonin Friberg", "file_name": "Test File", "description": "Hallo dies ist ein Test."}, {"name": "Jodok Senften", "file_name": "Star Trek", "description": "Text goes here text goes here."}, {"name": "Nicola Schwendimann", "file_name": "Test File", "description": "Text goes here..."}, {"name": "asdgasdg", "file_name": "sdgasgd", "description": "asdgadfgag"}, {"name": "asgklasjgd", "file_name": "j\u00f6lasjdgl\u00f6j", "description": "l\u00f6jasl\u00f6dgkfjl\u00f6kasdfg"}, {"name": "", "file_name": "", "description": ""}, {"name": "", "file_name": "", "description": ""}, {"name": "lkajsd\u00f6lf", "file_name": "l\u00f6asjdfl\u00f6", "description": "\u00f6laskjdgl\u00f6k"}, {"name": "asdf", "file_name": "asdf", "description": "asdf"}, {"name": "asdf", "file_name": "asdf", "description": "asdf"}, {"name": "asd\u00f6lfj", "file_name": "\u00f6lasjfg", "description": "\u00f6lajskd"}, {"name": "", "file_name": "", "description": ""}, {"name": "la\u00f6skdjf j", "file_name": "lasdfj\u00f6", "description": "\u00f6lasdf\u00f6l"}, {"name": "a\u00fcsldfj \u00f6", "file_name": "\u00f6lasdfj\u00f6", "description": "la\u00f6sdfjl\u00f6", "anyfile": null}, {"name": "", "file_name": "", "description": "", "anyfile": null}, {"name": "", "file_name": "", "description": "", "anyfile": null}, {"name": "", "file_name": "", "description": "", "anyfile": null}, {"name": "asdf", "file_name": "asdf", "description": "asdf", "anyfile": null}, {"name": "asdfa sfdj\u00f6", "file_name": "\u00f6asdf", "description": "j\u00f6alsdf", "anyfile": null}, {"name": "asdf", "file_name": "asdf", "description": "asdf", "anyfile": null}, {"name": "asfd", "file_name": "asdfakjsdf\u00f6l", "description": "\u00f6alsdjkf\u00f6lajsd\u00f6flgj", "anyfile": null}]
+[
+    {
+        "file_title": "Blume",
+        "name": "Antonin Friberg",
+        "file_name": "blume_rot-2020-04-17_104220.272819.JPG",
+        "file_path": "./files/blume_rot-2020-04-17_104220.272819.JPG",
+        "originalfilename": "asdf_2.JPG",
+        "description": "Fotografie einer Blume am Walensee."
+    }
+]
