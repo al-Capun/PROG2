@@ -3,12 +3,14 @@ from flask import render_template
 from flask import request
 from flask import redirect
 from flask import url_for
-from flask import send_file     # für download
+from flask import send_file     # für download -> zu löschen
 from werkzeug.utils import secure_filename
 
 import os
 import json
 from datetime import datetime
+import plotly.express as px
+import plotly.graph_objects as go
 
 
 app = Flask("WebApp")
@@ -62,6 +64,7 @@ def allowed_image_filesize(filesize):
     else:
         return False
 
+
 def get_preview_image(file_name):
     file_extension = file_name.split(".")[-1].lower()
     if file_extension == "docx":
@@ -109,7 +112,32 @@ def file_upload():
     return render_template("file_upload.html")
 
 
-# Download // kommt später in FEED rein
+# Statistics (funktioniert noch nicht)
+@app.route('/statistics')
+def statistics():
+    files = load_feed('./static/uploaded-files.json')
+    return render_template("statistics.html", files=files)
+
+
+def get_file_extension(files, file_extension):
+    file_extenstion_count = 0
+    for element in files:
+        current_file_extension = element["file_name"].split(".")[-1].lower()
+        if current_file_extension == file_extension:
+            file_extenstion_count = file_extenstion_count + 1
+    return file_extenstion_count
+
+
+# funktioniert nicht
+animals = ['giraffes', 'orangutans', 'monkeys']
+
+
+def viz():
+    fig = go.Figure([go.Bar(x=animals, y=[20, 14, 23])])
+    fig.show()
+
+
+# Download // kommt später in FEED rein -> nö zu löschen
 """
 @app.route("/return-file/<file_name>")
 def return_file(file_name):

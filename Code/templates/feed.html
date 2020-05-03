@@ -12,27 +12,14 @@
           <li class="nav-item active">
             <a class="nav-link" href="{{ url_for('feed')}}">Feed <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="{{ url_for('file_upload')}}">File Upload</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('statistics')}}">Statistics</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('file_upload')}}">asdf</a>
-          </li>
+
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Upload</button>
-        </form>
       </div>
     </nav>
     <!-- Container -->
@@ -42,17 +29,8 @@
         <h1 class="display-4">al-Capun</h1>
         <p class="lead">The internet’s source of freely usable docs and files. <br> Powered by al-Capun.</p>
       </div>
-      <!-- Search -->
-      <div class="d-flex justify-content-center">
-        <div class="mt-5 col-8 col-md-8 col-lg-6">
-          <form class="form-signin">
-            <div class="form-label-group">
-              <input type="search" id="search" class="form-control" placeholder="Search..." required autofocus>
-            </div>
-          </form>
-        </div>  <!-- col -->
-      </div>  <!-- row -->
-          <!-- File Grid -->
+      <!-- File Grid -->
+      <br>
       <div class="row mt-5 mb-5">
             
         {% for file in files %}
