@@ -68,12 +68,12 @@
                 <img src="/static/file-type-images/500x500.png">
               {% endif %}
               -->
-              <img src="/static/galleries/jj-ying-7JX0-bfiuxQ-unsplash_low.jpg" class="card-img-top" alt="dummy_image">
+              <img src="{{url_for('static', filename='files/' + file['preview_image'])}}" class="card-img-top" alt="dummy_image">
               
               <div class="card-body">
                 <h5 class="card-title">{{ file['name'] }}</h5>
                 <p class="card-text">{{ file['description'] }}</p>
-                <a class="nav-link" class="btn btn-outline-dark" href="{{ url_for('file_upload')}}">Download</a> <!-- für Download // funktioniert noch nicht -->
+                <a class="nav-link" class="btn btn-outline-dark" href="{{url_for('static', filename='files/' + file['file_name'])}}" download="{{file['file_name']}}">Download</a>
               </div>
             </div>
           </div> <!-- card 1 -->

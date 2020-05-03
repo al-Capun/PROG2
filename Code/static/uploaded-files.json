@@ -1,10 +1,11 @@
 [
     {
-        "file_title": "Blume",
-        "name": "Antonin Friberg",
-        "file_name": "blume_rot-2020-04-17_104220.272819.JPG",
-        "file_path": "./files/blume_rot-2020-04-17_104220.272819.JPG",
-        "originalfilename": "asdf_2.JPG",
-        "description": "Fotografie einer Blume am Walensee."
+        "file_title": "asdgf",
+        "name": "asdg",
+        "file_name": "asdg-2020-05-03_110202.483220.docx",
+        "file_path": "./static/files/asdg-2020-05-03_110202.483220.docx",
+        "originalfilename": "Datenbank.docx",
+        "description": "asdg",
+        "preview_image": "bild.jpg"
     }
 ]
