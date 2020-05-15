@@ -9,11 +9,11 @@ from werkzeug.utils import secure_filename
 import os
 import json
 from datetime import datetime
-import plotly.express as px
 import plotly.graph_objects as go
+import plotly
 
 
-app = Flask("WebApp")
+app = Flask("WebApp")      # auch möglich: app = Flask(__name__)
 
 
 # JSON File rauslesen und im Feed laden.
@@ -116,7 +116,19 @@ def file_upload():
 @app.route('/statistics')
 def statistics():
     files = load_feed('./static/uploaded-files.json')
-    return render_template("statistics.html", files=files)
+    jpeg_count = get_file_extension(files, "jpeg")
+    jpg_count = get_file_extension(files, "jpg")
+    png_count = get_file_extension(files, "png")
+    docx_count = get_file_extension(files, "docx")
+    pdf_count = get_file_extension(files, "pdf")
+    gif_count = get_file_extension(files, "gif")
+
+    x_data = ["JPEG", "JPG", "PNG", "GIF", "DOCX", "PDF"]
+    y_data = [jpeg_count, jpg_count, png_count, gif_count, docx_count, pdf_count]
+    title = "Bar Chart XY"
+    fig = go.Figure(data=[go.Bar(x = x_data, y = y_data)], layout_title_text=title)     #go.Bar = Bar Chart rendern
+    viz_div = plotly.offline.plot(fig, output_type="div")
+    return render_template("statistics.html", files=files, viz_div=viz_div)     #viv_div = Variabel für das HTML file
 
 
 def get_file_extension(files, file_extension):
@@ -128,13 +140,7 @@ def get_file_extension(files, file_extension):
     return file_extenstion_count
 
 
-# funktioniert nicht
-animals = ['giraffes', 'orangutans', 'monkeys']
 
-
-def viz():
-    fig = go.Figure([go.Bar(x=animals, y=[20, 14, 23])])
-    fig.show()
 
 
 # Download // kommt später in FEED rein -> nö zu löschen
