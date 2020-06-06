@@ -36,7 +36,12 @@
                             <h5 class="my-0 font-weight-normal">Please enter your data.</h5>
                         </div>
                         <div class="card-body">
+                            <!--
+                            Mit Flask lassen sich auch Daten aus z.B. Formularen auslesen. Dafür wird ein HTML Formular erzeugt das die Daten mittels der POST Methode überträgt.
 
+                            Wichtig ist, dass das Eingabefeld, in diesem Fall <input>, eine Bezeichnung (das Attribut name) geben wird (name="file_title") .
+                            Die Daten werden dann als dict in an Flask übergeben. Das Attribut name ist dabei der Schlüssel, der Wert ist der vom Benutzer eingebene Inhalt.
+                            -->
                             <form method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="file_title">Titel</label>

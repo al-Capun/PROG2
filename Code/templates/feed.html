@@ -1,3 +1,9 @@
+<!--
+Da sich in einer Webapp oft grosse Teile des HTML Codes wiederholen, können diese als Jinja Blöcke ausgelagert und in anderem HTML Code eingebunden bzw verlinkt werden.
+Beispiel:           { % include "header.html" %}
+oder im Footer:     { % include "footer.html" %}
+-->
+
 {% include "header.html" %}
 <body>
   <main>
@@ -32,20 +38,19 @@
       <!-- File Grid -->
       <br>
       <div class="row mt-5 mb-5">
-            
-        {% for file in files %}
+
+
+        <!-- Flask - Jinja2
+        Mit Jinja können wir die Ausgabe in HTML verpacken. Dazu erstellen wir ein HTML Template und definieren, wo welchen Inhalt eingefügt werden soll.
+        
+        Der Templates Ordner beinhaltet die HTML Templates für Flask und Jinja2. Dabei werden "{{" und "}}" benutzt um Ersetzungen an den Template Renderer zu geben.
+        --> 
+        {% for file in files %} <!-- "{ % blabla %}" sind Logik-Befehle // Mittels { % logik %} können wir auch Logik in unsere HTML Templates einbauen. -->
           <div class="col-sm-6 col-md-4 col-lg-3 mb-3"> <!-- card 1 -->
             <div class="card mb-4 box-shadow">
               <div class="card-header">
-                <h4 class="my-0 font-weight-normal">{{ file['file_title'] }}</h4>
+                <h4 class="my-0 font-weight-normal">{{ file['file_title'] }}</h4> <!-- { { bla bla }} holen und speichern Sachen im Code // in diesem Fall den File Titel-->
               </div>
-              <!-- diese fünf Zeilen funktionieren noch nicht.
-              {% if file['file_type'] == 'word'%}
-                <img src="/static/file-type-images/word.png">
-              {% else %}
-                <img src="/static/file-type-images/500x500.png">
-              {% endif %}
-              -->
               <img src="{{url_for('static', filename='files/' + file['preview_image'])}}" class="card-img-top" alt="dummy_image">
               
               <div class="card-body">
