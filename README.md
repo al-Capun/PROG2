@@ -6,7 +6,7 @@ Weiter soll mithilfe von Plotly eine Grafik mit den gesammelten Daten erstellt w
 
 ## Funktion/Projektidee
 - Dateien hochladen
-– Dateien anschauen
+- Dateien anschauen
 - Dateien herunterladen
 - Daten visualisieren
 
