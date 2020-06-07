@@ -1,47 +1,83 @@
 [
     {
-        "file_title": "asdgkj",
-        "name": "\u00f6ljd",
-        "file_name": "oljfolasjdfol-2020-05-03_162507.262541.docx",
-        "file_path": "./static/files/oljfolasjdfol-2020-05-03_162507.262541.docx",
-        "originalfilename": "Entwicklungen.docx",
-        "description": "jdl\u00f6kqjdgl\u00f6",
-        "preview_image": "DOCX.jpg"
+        "file_title": "Shadows",
+        "name": "Mitchell Luo",
+        "file_name": "PPcLeO8sC6I-2020-06-07_172525.620135.jpg",
+        "file_path": "./static/files/PPcLeO8sC6I-2020-06-07_172525.620135.jpg",
+        "originalfilename": "mitchell-luo-PPcLeO8sC6I-unsplash.jpg",
+        "description": "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.",
+        "preview_image": "PPcLeO8sC6I-2020-06-07_172525.620135.jpg"
     },
     {
-        "file_title": "asdf",
-        "name": "kh",
-        "file_name": "lkh-2020-05-03_162619.772361.docx",
-        "file_path": "./static/files/lkh-2020-05-03_162619.772361.docx",
-        "originalfilename": "Entwicklungen.docx",
-        "description": "lk",
-        "preview_image": "DOCX.jpg"
+        "file_title": "Lichtspiel",
+        "name": "Aleksandar Savic",
+        "file_name": "Lichtspiel-2020-06-07_172850.807838.jpg",
+        "file_path": "./static/files/Lichtspiel-2020-06-07_172850.807838.jpg",
+        "originalfilename": "aleksandar-savic-PkNI7zbQH50-unsplash.jpg",
+        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right.",
+        "preview_image": "Lichtspiel-2020-06-07_172850.807838.jpg"
     },
     {
-        "file_title": "asdfas",
-        "name": "dfasdf",
-        "file_name": "-2020-05-03_162733.461786.docx",
-        "file_path": "./static/files/-2020-05-03_162733.461786.docx",
-        "originalfilename": "Datenbank.docx",
-        "description": "o",
-        "preview_image": "DOCX.jpg"
-    },
-    {
-        "file_title": "sidjf\u00f6l",
-        "name": "j\u00f6ljqd\u00f6lfj",
-        "file_name": "oljol-2020-05-03_162849.965459.pdf",
-        "file_path": "./static/files/oljol-2020-05-03_162849.965459.pdf",
-        "originalfilename": "Kostenvoranschlag_16767_picturia_autos.pdf",
-        "description": "j\u00f6lf",
+        "file_title": "Hello World!",
+        "name": "Hallo Welt",
+        "file_name": "hallo_welt-2020-06-07_173905.239343.pdf",
+        "file_path": "./static/files/hallo_welt-2020-06-07_173905.239343.pdf",
+        "originalfilename": "Dummy_file.pdf",
+        "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a.",
         "preview_image": "PDF.jpg"
     },
     {
-        "file_title": "sakjd\u00f6l",
-        "name": "j\u00f6ldjqf\u00f6l",
-        "file_name": "jfdolk-2020-05-03_162953.522878.png",
-        "file_path": "./static/files/jfdolk-2020-05-03_162953.522878.png",
-        "originalfilename": "Bildschirmfoto 2020-04-30 um 17.37.32.png",
-        "description": "gf\u00f6l",
-        "preview_image": "jfdolk-2020-05-03_162953.522878.png"
+        "file_title": "Wasserfall",
+        "name": "Arvin Putra Pratama",
+        "file_name": "Wasserfall_02-2020-06-07_173010.431409.jpg",
+        "file_path": "./static/files/Wasserfall_02-2020-06-07_173010.431409.jpg",
+        "originalfilename": "arvin-putra-pratama-61uYP-Qlo0Y-unsplash.jpg",
+        "description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am.",
+        "preview_image": "Wasserfall_02-2020-06-07_173010.431409.jpg"
+    },
+    {
+        "file_title": "Ein Lied",
+        "name": "Hans Zimmer",
+        "file_name": "dokument_xy-2020-06-07_173730.316303.docx",
+        "file_path": "./static/files/dokument_xy-2020-06-07_173730.316303.docx",
+        "originalfilename": "Dummy_file.docx",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.",
+        "preview_image": "DOCX.jpg"
+    },
+    {
+        "file_title": "Farbiger Himmel",
+        "name": "Pierre Ch\u00e2tel-Innocenti",
+        "file_name": "Farbiger_Himmel-2020-06-07_173422.282726.jpg",
+        "file_path": "./static/files/Farbiger_Himmel-2020-06-07_173422.282726.jpg",
+        "originalfilename": "pierre-chatel-innocenti-ki35Py3GbKE-unsplash.jpg",
+        "description": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like.",
+        "preview_image": "Farbiger_Himmel-2020-06-07_173422.282726.jpg"
+    },
+    {
+        "file_title": "big barn",
+        "name": "Faulkner",
+        "file_name": "faulkner-2020-06-07_174509.171207.gif",
+        "file_path": "./static/files/faulkner-2020-06-07_174509.171207.gif",
+        "originalfilename": "big-barn-faulkner-architects-california-designboom-01.gif",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.",
+        "preview_image": "faulkner-2020-06-07_174509.171207.gif"
+    },
+    {
+        "file_title": "Black and White",
+        "name": "Robin Schreiner",
+        "file_name": "blackandwhite-2020-06-07_174902.095669.jpeg",
+        "file_path": "./static/files/blackandwhite-2020-06-07_174902.095669.jpeg",
+        "originalfilename": "robin-schreiner-yADXyB-BhV8-unsplash.jpeg",
+        "description": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds.",
+        "preview_image": "blackandwhite-2020-06-07_174902.095669.jpeg"
+    },
+    {
+        "file_title": "Whitepaper",
+        "name": "Sato Shi",
+        "file_name": "whitepaper-2020-06-07_175041.597204.docx",
+        "file_path": "./static/files/whitepaper-2020-06-07_175041.597204.docx",
+        "originalfilename": "Dummy_file_2.docx",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.",
+        "preview_image": "DOCX.jpg"
     }
 ]

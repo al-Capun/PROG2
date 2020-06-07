@@ -3,13 +3,13 @@ from flask import render_template
 from flask import request
 from flask import redirect
 from flask import url_for       # Mit url_for kann auch die URL zu einer Funktion die eine Route besitzt geholt werden.
-from werkzeug.utils import secure_filename
+from werkzeug.utils import secure_filename      # immer diese Funktion verwenden, um einen Dateinamen zu sichern, bevor man auf dem Dateisystem speichert.
 
-import os
-import json
-from datetime import datetime
-import plotly.graph_objects as go
-import plotly
+import os       # Das OS-Modul in Python bietet eine Möglichkeit, betriebssystemabhängige Funktionalität zu nutzen.
+import json         # JSON für Datenbank
+from datetime import datetime       # aktuelles Datum importieren
+import plotly.graph_objects as go       # für Grafiken mit Plotly
+import plotly       # für Grafiken mit Plotly
 
 
 """
@@ -25,8 +25,8 @@ app = Flask("WebApp")      # auch möglich: app = Flask(__name__) -> Wir initial
 
 # No.2. JSON File rauslesen und im Feed laden.
 def load_feed(path):        # Funktion load_feed wird ausgelöst. "path" ist unten in @app.route('./feed/') definiert.
-        # Wir teilen der App mit, welche URL was ausführen soll.
-        # Wir definieren die Funktion die beim Aufruf der URL ausgeführt werden soll und was diese Funktion zurückgeben soll.
+    # Wir teilen der App mit, welche URL was ausführen soll.
+    # Wir definieren die Funktion die beim Aufruf der URL ausgeführt werden soll und was diese Funktion zurückgeben soll.
     try:
         with open(path, "r") as datei:      # Datei im Pfad (JSON-File) wird eingelesen.
             return json.load(datei)
@@ -34,7 +34,7 @@ def load_feed(path):        # Funktion load_feed wird ausgelöst. "path" ist unt
         return []
 
 
-def save_files(path, data):
+def save_files(path, data):     # Funktion um Infos vom neuen Upload ins JSON zu speichern/schreiben. Der Pfad ist unten bei der Upload Route zu finden.
     with open(path, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
 
@@ -48,13 +48,14 @@ def feed():     # Funktion
     # files ist die Variable in meiner HTML Datei und files (an zweiter Stelle) ist der Wert, mit der sie ersetzt werden soll.
 
 
-IMAGE_UPLOADS = "./static/files"       # für Download erstellt
-app.config["IMAGE_UPLOADS"] = "./static/files"
-app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["JPEG", "JPG", "PNG", "GIF", "DOCX"]
-app.config["MAX_IMAGE_FILESIZE"] = 0.5 * 1024 * 1024
+IMAGE_UPLOADS = "./static/files"       # der Ort, an dem die hochgeladenen Dateien gespeichern werden.
+app.config["IMAGE_UPLOADS"] = "./static/files"      # "config" ist eigentlich eine Unterklasse eines Dictionaries und kann wie jedes Dictionary modifiziert werden.
+app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["JPEG", "JPG", "PNG", "GIF", "DOCX"]      # die Menge der erlaubten Dateierweiterungen.
+app.config["MAX_IMAGE_FILESIZE"] = 0.5 * 1024 * 1024        # Der Code begrenzt die maximal zulässige Nutzlast auf 0.5 Megabyte.
+# Wenn eine größere Datei übertragen wird, löst Flask eine RequestEntityTooLarge-Ausnahme aus.
 
 
-def allowed_image(filename):
+def allowed_image(filename):        # Funktion um die Suffixe einer Datei zu prüfen. Config "ALLOWED_IMAGE_EXTENSIONS" ist auf Zeile 53 zu finden.
 
     if "." not in filename:
         return False
@@ -67,7 +68,7 @@ def allowed_image(filename):
         return False
 
 
-def allowed_image_filesize(filesize):
+def allowed_image_filesize(filesize):       # Funktion um die Grösse eines Files zu prüfen. Config "AX_IMAGE_FILESIZE" ist auf Zeile 54 zu finden.
 
     if int(filesize) <= app.config["MAX_IMAGE_FILESIZE"]:
         return True
@@ -75,7 +76,7 @@ def allowed_image_filesize(filesize):
         return False
 
 
-def get_preview_image(file_name):
+def get_preview_image(file_name):       # Wenn Datei ein DOCX oder ein PDF ist werden die Preview Images geladen, ansosnten wird das hochgeladene Bild im Feed angezeigt.
     file_extension = file_name.split(".")[-1].lower()
     if file_extension == "docx":
         return "DOCX.jpg"
@@ -103,21 +104,22 @@ def file_upload():
     files = load_feed('./static/uploaded-files.json')       # load_feed Funktion holt das JSON File
     if request.method == "POST":        # wenn Daten übermittelt werden sollen (POST) geht es weiter in der if-Anweisung
         if 'file' not in request.files:     # wenn file nicht in JSON dann...
-            f = request.files['image']
+            f = request.files['image']      # Hochgeladene Dateien werden im JSON File gespeichert.
+            # Ich kann auf diese Dateien zugreifen, indem ich das Attribut files am Anfrageobjekt ansehe.
             file_title = request.form.get("file_title")
             file_name = request.form.get("file_name")       # Dateiname aus dem Forlmular
             # filename = secure_filename(f.filename)      # Dateiname der hochgeladenen Datei
-            dateiendung = f.filename.split(".")[-1]
-            speichername = file_name + "-" + str(datetime.now()) + "." + dateiendung
-            speichername = secure_filename(speichername)
+            dateiendung = f.filename.split(".")[-1]     # Datei wird vor dem Punkt gesplittet
+            speichername = file_name + "-" + str(datetime.now()) + "." + dateiendung        # Dateiname + akt. Datum/Zeit + Dateiendung ist der neue Name
+            speichername = secure_filename(speichername)        # immer diese Funktion verwenden, um einen Dateinamen zu sichern, bevor man ihn direkt auf dem Dateisystem speichert.
 
             filepath = os.path.join(app.config['IMAGE_UPLOADS'], speichername)
-            print(filepath)
-            f.save(filepath)
+            print(filepath)     # print zur Kontrolle in der Konsole
+            f.save(filepath)       # Die save()-Methode, speichert die Datei in die Datenbank auf dem Server oder in meinem Fall lokal.
 
             name = request.form.get("name")
             description = request.form.get("description")
-            new_file = {}
+            new_file = {}       # neuer Eintrag im Dictionary
             new_file["file_title"] = file_title
             new_file["name"] = name
             new_file["file_name"] = speichername
@@ -153,7 +155,7 @@ indem der Variable noch ein |safe angefügt wird.
 
 @app.route('/statistics')
 def statistics():
-    files = load_feed('./static/uploaded-files.json')
+    files = load_feed('./static/uploaded-files.json')       # Suffixe rauslesen für den Counter
     jpeg_count = get_file_extension(files, "jpeg")
     jpg_count = get_file_extension(files, "jpg")
     png_count = get_file_extension(files, "png")
@@ -161,15 +163,15 @@ def statistics():
     pdf_count = get_file_extension(files, "pdf")
     gif_count = get_file_extension(files, "gif")
 
-    x_data = ["JPEG", "JPG", "PNG", "GIF", "DOCX", "PDF"]
-    y_data = [jpeg_count, jpg_count, png_count, gif_count, docx_count, pdf_count]
-    title = "Bar Chart XY"
+    x_data = ["JPEG", "JPG", "PNG", "GIF", "DOCX", "PDF"]       # Daten auf der X-Achse
+    y_data = [jpeg_count, jpg_count, png_count, gif_count, docx_count, pdf_count]       # Daten auf der Y-Achse
+    title = "Statistics of the number of file types used on this website."
     fig = go.Figure(data=[go.Bar(x=x_data, y=y_data)], layout_title_text=title)     # go.Bar = Bar Chart rendern
     viz_div = plotly.offline.plot(fig, output_type="div")
     return render_template("statistics.html", files=files, viz_div=viz_div)     # viv_div = Variabel für das HTML file
 
 
-def get_file_extension(files, file_extension):
+def get_file_extension(files, file_extension):      # Counter für die verschieden Dateitypen.
     file_extenstion_count = 0
     for element in files:
         current_file_extension = element["file_name"].split(".")[-1].lower()

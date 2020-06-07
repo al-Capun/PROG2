@@ -37,17 +37,16 @@ oder im Footer:     { % include "footer.html" %}
       </div>
       <!-- File Grid -->
       <br>
-      <div class="row mt-5 mb-5">
+      <div class="card-columns"> <!-- column -->
 
 
         <!-- Flask - Jinja2
-        Mit Jinja können wir die Ausgabe in HTML verpacken. Dazu erstellen wir ein HTML Template und definieren, wo welchen Inhalt eingefügt werden soll.
+        Mit Jinja kann die Ausgabe in HTML verpackt werden. Dazu erstellen wir ein HTML Template und definieren, wo welchen Inhalt eingefügt werden soll.
         
         Der Templates Ordner beinhaltet die HTML Templates für Flask und Jinja2. Dabei werden "{{" und "}}" benutzt um Ersetzungen an den Template Renderer zu geben.
         --> 
         {% for file in files %} <!-- "{ % blabla %}" sind Logik-Befehle // Mittels { % logik %} können wir auch Logik in unsere HTML Templates einbauen. -->
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-3"> <!-- card 1 -->
-            <div class="card mb-4 box-shadow">
+            <div class="card mb-4 box-shadow"> <!-- card 1 -->
               <div class="card-header">
                 <h4 class="my-0 font-weight-normal">{{ file['file_title'] }}</h4> <!-- { { bla bla }} holen und speichern Sachen im Code // in diesem Fall den File Titel-->
               </div>
@@ -58,11 +57,10 @@ oder im Footer:     { % include "footer.html" %}
                 <p class="card-text">{{ file['description'] }}</p>
                 <a class="nav-link" class="btn btn-outline-dark" href="{{url_for('static', filename='files/' + file['file_name'])}}" download="{{file['file_name']}}">Download</a>
               </div>
-            </div>
-          </div> <!-- card 1 -->
+            </div> <!-- card 1 -->
         {% endfor %}
         <!-- cards from 2 to X (wird in Python nach Bedarf geladen) -->
-      </div> <!-- row -->
+      </div> <!-- column -->
     </div> <!-- container -->
   </main>
 </body>
